@@ -1,0 +1,83 @@
+/************
+* Generic
+*************/
+
+@font-face {
+  font-family: "icomoon";
+  src: url("./assets/fonts/icomoon.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+/***************
+* ICONS
+****************/
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-logo:before {
+  content: "\e910";
+}
+.icon-admin-alt:before {
+  content: "\e900";
+}
+.icon-admin:before {
+  content: "\e901";
+}
+.icon-canal-indirecto:before {
+  content: "\e902";
+}
+.icon-close:before {
+  content: "\e903";
+}
+.icon-contratistas:before {
+  content: "\e904";
+}
+.icon-empleados-altice:before {
+  content: "\e905";
+}
+.icon-empleados:before {
+  content: "\e906";
+}
+.icon-files:before {
+  content: "\e907";
+}
+.icon-home:before {
+  content: "\e908";
+}
+.icon-logout:before {
+  content: "\e909";
+}
+.icon-menu:before {
+  content: "\e90a";
+}
+.icon-notifications:before {
+  content: "\e90b";
+}
+.icon-sales:before {
+  content: "\e90c";
+}
+.icon-socios:before {
+  content: "\e90d";
+}
+.icon-taggle:before {
+  content: "\e90e";
+}
+.icon-tip:before {
+  content: "\e90f";
+}

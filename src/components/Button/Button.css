@@ -1,0 +1,42 @@
+.button { 
+  padding: 0.5em 2em;
+  width: fit-content;
+  border: 1px solid transparent;
+  border-radius: 3em;
+  font-weight: bold;
+  color: #fff;
+}
+.button:hover {
+	box-shadow: 0px 0px 5px 1px rgb(50, 51, 48, 0.1);
+}
+.button:active {
+	box-shadow: inset 0px 0px 5px 1px rgb(50, 51, 48, 0.1);
+	filter: brightness(95%);
+}
+
+/* button size */
+.button.button-lg {
+	font-size: 1rem;
+}
+.button.button-md {
+	font-size: 0.8rem;
+}
+.button.button-sm {
+	font-size: 0.6rem;
+}
+/* rounded button
+.button.button-soft {
+	border-radius: 0.2rem;
+}
+.button.button-hard {
+	border-radius: 0.4rem;
+} */
+
+/* disabled state when isDisabled === true */
+.button.disabled {
+	background: white;
+	border: solid 0.5px lightgray;
+	color: lightgray;
+	cursor: not-allowed;
+	box-shadow: none;
+}

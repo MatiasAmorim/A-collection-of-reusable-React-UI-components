@@ -1,0 +1,29 @@
+:root {
+    --primary-color: #0d61ae;
+    --secundary-color: #8b96ad;
+    --call-to-action: linear-gradient(
+      -147deg,
+      rgba(244, 132, 39, 1) 2%,
+      rgba(238, 62, 150, 1) 86%
+    );
+  }
+  
+  /* btnType */
+.button-primary {
+    background: var(--primary-color);
+}
+.button-secondary {
+    background: var(--secundary-color);
+}
+.button-CTA{
+    text-transform: uppercase;
+    background: var(--call-to-action);
+  }
+
+
+  .text_primary {
+    color: var(--primary-color);
+  }
+  .text_secondary {
+    color: var(--secundary-color);
+  }
