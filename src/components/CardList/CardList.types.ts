@@ -2,14 +2,13 @@
 import { MouseEventHandler } from "react"
 import { IconType } from "../Icon/Icon.types"
 
-export interface CardListType extends Omit<IconType, 'size'>
+export interface CardListType extends Pick<IconType, 'Iname' | "Icolor">
 {
-	label: string
-    labelColor: string
-    iconName:string
-    otherClass?:string
+	CLlabel: string
+    CLcolor: string
+    CLclasses?:string
     onClick?: MouseEventHandler
-	bgCardListColor:string
+	CLbgColor:string
 }
 
 

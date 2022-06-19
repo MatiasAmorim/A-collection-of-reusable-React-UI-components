@@ -2,16 +2,16 @@ import React from "react"
 import { IconType } from "./Icon.types"
 import "./Icon.css"
 
-const Button= ({ color, name, size="md", onClick, classes, bgColor, shape="circle"} : IconType) => {
+const Button= ({ Icolor, Iname, Isize="md", onClick, Iclasses, IbgColor, Ishape="circle"} : IconType) => {
 	return (
-		<div className={`icon_container ${shape}`} style={{
-			background: bgColor
+		<div className={`icon_container ${Ishape}`} style={{
+			background: IbgColor
 		}}>
 			<span 
-				className={`${name} ${classes} ${`icon_${size}`}`}
+				className={`${Iname} ${Iclasses} ${`icon_${Isize}`}`}
 				onClick={onClick}
 				style={{
-					color: color,
+					color: Icolor,
 				}}
 			></span>
 		</div>

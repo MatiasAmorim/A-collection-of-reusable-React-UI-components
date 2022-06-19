@@ -9,16 +9,16 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: `**Este componente tiene 2 argumentos obligatorios _name_ y _color_.**\
+        component: `**Este componente tiene 2 argumentos obligatorios _Iname_ y _Icolor_.**\
         
         Descripcion de argumentos: (Ver introducción para conocer las clases que usted debe agregar a su proyecto)\
         
-        **_name_**: (string) Nombre de clase para generar el icomoon.  
-        **_color_**: (string) Color de icono.   
-        **_size_**: (_sm_: Icono small. _md_: Valor por defecto icono mediano. _lg_: Icono grande)  
-        **_classes_**: (string) Clases adicionales.   
-        **_bgColor_**: (string) color de fondo para el icono.  
-        **_shape_**: ( _circle_: Fondo circulo. _square_: Fondo cuadrado) Forma para el fondo en caso de que lo requiera.   
+        **_Iname_**: (string) Nombre de clase para generar el icomoon.  
+        **_Icolor_**: (string) Color de icono.   
+        **_Isize_**: (_sm_: Icono small. _md_: Valor por defecto icono mediano. _lg_: Icono grande)  
+        **_Iclasses_**: (string) Clases adicionales.   
+        **_IbgColor_**: (string) color de fondo para el icono.  
+        **_Ishape_**: ( _circle_: Fondo circulo. _square_: Fondo cuadrado) Forma para el fondo en caso de que lo requiera.   
         **_onClick_**: (Funcion). 
         `,
       },
@@ -39,37 +39,36 @@ const showAlert=()=> alert("click icon")
 
 export const Default = Template.bind({});
 Default.args = {
-  color:"rgba(0, 0, 255, 1)", 
-  name: "icon-home", 
+  Icolor:"rgba(0, 0, 255, 1)", 
+  Iname: "icon-home", 
   onClick: showAlert
 };
 
 export const Small = Template.bind({});
 Small.args = {
-  color:"rgba(0, 0, 255, 1)", 
-  name: "icon-home", 
-  size: "sm"
+  Icolor:"rgba(0, 0, 255, 1)", 
+  Iname: "icon-home", 
+  Isize: "sm"
 };
 
 export const Large = Template.bind({});
 Large.args = {
-  color:"rgba(0, 0, 255, 1)", 
-  name: "icon-home", 
-  size: "lg"
+  Icolor:"rgba(0, 0, 255, 1)", 
+  Iname: "icon-home", 
+  Isize: "lg"
 };
 
 export const CircleBackgroundDefault = Template.bind({});
 CircleBackgroundDefault.args = {
-  color:"white", 
-  name: "icon-home", 
-  bgColor: "rgba(0, 0, 255, 1)"
+  Icolor:"white", 
+  Iname: "icon-home", 
+  IbgColor: "rgba(0, 0, 255, 1)"
 };
 
 export const SqureBackground = Template.bind({});
 SqureBackground.args = {
-  color:"white", 
-  name: "icon-home", 
-  shape: "square",
-  bgColor: "tomato"
-
+  Icolor:"white", 
+  Iname: "icon-home", 
+  Ishape: "square",
+  IbgColor: "tomato"
 };
