@@ -47,7 +47,7 @@ const Card: React.FC<CardType> = (props) => {
             <p className="description">{description}</p>
             <Button
               size="md"
-              btnType="primary"
+              bgColor="primary"
               label={txtBtn}
               onClick={() => {}}
             />

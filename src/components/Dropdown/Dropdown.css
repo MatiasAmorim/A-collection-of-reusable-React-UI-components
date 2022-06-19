@@ -1,0 +1,17 @@
+
+.Dropdcl_toogle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Dropdcl_icon.flip {
+  transform: rotate(180deg);
+}
+.Dropdcl_menu {
+  margin: 0.8rem;
+  padding: 0 1.5rem;
+}
+
+.Dropdcl_menu > li {
+  padding: 0.3rem 0;
+}

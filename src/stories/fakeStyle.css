@@ -20,7 +20,8 @@
     background: var(--call-to-action);
 }
 
-.txt_primary {
+.txt_primary
+{
   color: var(--primary-color);
 }
 .txt_secondary {
@@ -30,3 +31,28 @@
 .clasedeprueba{
   font-size: 5rem;
 }
+
+/*****
+INPUTS
+******/
+
+.floating_input{
+	caret-color: var(--primary-color);
+}
+.floating__label::after {  
+	background-color: var(--primary-color);
+}
+.floating__input:focus + .floating__label::before {
+	color: var(--primary-color);
+}
+.floating__input {
+	border-bottom: 0.13rem solid #8d8d8d;
+}
+.floating:hover .floating__input {
+	border-color: var(--primary-color);
+}
+.floating:hover  .floating__label::before 
+{
+  color: var(--primary-color);
+}
+  
