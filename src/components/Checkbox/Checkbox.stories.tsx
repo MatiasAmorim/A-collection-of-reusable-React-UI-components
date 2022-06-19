@@ -31,56 +31,8 @@ export default {
 
 const Template: ComponentStory<typeof Checkbox> = (args) => <Checkbox {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const CheckBoxExample = Template.bind({});
+CheckBoxExample.args = {
   label:"Primary Button", 
   bgColor:"primary", 
 };
-
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label:"Secondary Button", 
-  bgColor:"secondary", 
-};
-
-export const CTA = Template.bind({});
-CTA.args = {
-  label:"CTA Button", 
-  bgColor:"CTA", 
-};
-
-export const SmallSize = Template.bind({});
-SmallSize.args = {
-  label:"Small Size Button", 
-  bgColor:"primary",
-  size: "sm"
-};
-export const DefaultSize = Template.bind({});
-DefaultSize.args = {
-  label:"Medium Size Button", 
-  bgColor:"primary",
-};
-export const LargeSize = Template.bind({});
-LargeSize.args = {
-  label:"Large Size Button", 
-  bgColor:"primary", 
-  size:"lg"
-};
-export const BorderSoft = Template.bind({});
-BorderSoft.args = {
-  label:"Soft border Button", 
-  bgColor:"primary", 
-  rounded:"soft",
-};
-export const BorderDefault= Template.bind({});
-BorderDefault.args = {
-  label:"Hard border Button", 
-  bgColor:"primary", 
-};
-export const BorderNone= Template.bind({});
-BorderNone.args = {
-  label:"None border Button", 
-  bgColor:"primary", 
-  rounded:"none",
-};
-

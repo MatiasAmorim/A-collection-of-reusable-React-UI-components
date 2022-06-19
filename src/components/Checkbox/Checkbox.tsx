@@ -6,19 +6,27 @@ import "./Checkbox.css"
 const Button = ({label, size="md", bgColor, onClick, classes="", rounded="hard", isDisabled}:CheckboxType) => {
 
 	return (
-		<button
-			className={`button
-						${classes}
-						${`bg_${bgColor}`}
-						${`button_${size}`}
-						${`button_${rounded}`}
-						${isDisabled?"disabled": ""}
-						${bgColor=="link"? "txt_primary": ""}
-					`}
-			onClick={onClick}
-			disabled={isDisabled ?? false}>
-			{label}
-		</button>
+		<form action="">
+  <label className="form-control">
+    <input type="checkbox" name="checkbox" />
+    Checkbox
+  </label>
+
+  <label className="form-control">
+    <input type="checkbox" name="checkbox-checked" checked />
+    Checkbox - checked
+  </label>
+
+  <label className="form-control form-control--disabled">
+    <input type="checkbox" name="checkbox-disabled" disabled />
+    Checkbox Disabled
+  </label>
+
+  <label className="form-control form-control--disabled">
+    <input type="checkbox" name="checkbox-disabled-checked" checked disabled />
+    Checkbox Disabled - checked
+  </label>
+</form>
 	)
 }
 

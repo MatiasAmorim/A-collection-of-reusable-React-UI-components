@@ -1,5 +1,34 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 
+interface themeObj{
+  primaryColor: string;
+ secundaryColor:string;
+  CTAColor: string;
+}
+const themeDefaultValues = {
+      primaryColor: "#0d61ae",
+      secundaryColor: "#8b96ad",
+      CTAColor: "linear-gradient(-147deg,rgba(244, 132, 39, 1) 2%,rgba(238, 62, 150, 1) 86%)"
+}
+function useTheme() {
+
+  const [themeC, setThemeC] = useState(themeDefaultValues);
+
+  const saveTheme = (themeVal:Partial<themeObj>) =>{
+    setThemeC(oldValue => ({
+      ...oldValue,
+      ...themeVal
+    }));
+  }
+
+
+  return {themeC, saveTheme};
+
+}
+
+export default useTheme;
+
+/*
 interface Props {
     children?: JSX.Element
 }
@@ -35,3 +64,4 @@ function ThemeContextProvider({children} : Props){
 
 export default ThemeContextProvider ;
 
+*/
