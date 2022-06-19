@@ -2,7 +2,6 @@
   padding: 0.5em 2em;
   width: fit-content;
   border: 1px solid transparent;
-  border-radius: 3em;
   font-weight: bold;
   color: #fff;
 }
@@ -14,29 +13,47 @@
 	filter: brightness(95%);
 }
 
+/*****
+ SPECIAL BUTTONS
+******/
+
+/*Button link*/
+.button.bg_link{
+	background: none;
+	color: blue;
+	font-weight: 200;
+}
+.button.bg_link:hover {
+	box-shadow: none;
+}
+
+/*****
+ BUTTONS CHARACTERISTICS
+******/
 /* button size */
-.button.button-lg {
+.button.button_lg {
 	font-size: 1rem;
 }
-.button.button-md {
+.button.button_md {
 	font-size: 0.8rem;
 }
-.button.button-sm {
+.button.button_sm {
 	font-size: 0.6rem;
 }
-/* rounded button
-.button.button-soft {
-	border-radius: 0.2rem;
+/* rounded button */
+.button.button_soft {
+	border-radius: 0.5rem;
 }
-.button.button-hard {
-	border-radius: 0.4rem;
-} */
+.button.button_hard {
+	border-radius: 3em;
+}
 
 /* disabled state when isDisabled === true */
 .button.disabled {
-	background: white;
-	border: solid 0.5px lightgray;
-	color: lightgray;
+	background: rgb(236, 236, 236);
+	border: solid 0.5px rgb(212, 212, 212);
+	color: rgb(185, 185, 185);;
 	cursor: not-allowed;
 	box-shadow: none;
 }
+

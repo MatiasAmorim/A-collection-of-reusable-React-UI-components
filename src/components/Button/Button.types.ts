@@ -1,12 +1,13 @@
 import { MouseEventHandler } from "react"
 
+
+
 export type ButtonType = {
 	label: string
-	size: "lg" | "md" | "sm"
-	btnType: "primary" | "secondary" | "CTA" | "personalized"
+	bgColor: "primary" | "secondary" | "CTA" | "link"
+	size?: "lg" | "md" | "sm"
 	onClick?: MouseEventHandler<HTMLButtonElement>
-	//rounded?: "soft" | "hard"
+	classes?: string
+	rounded?: "none"| "soft" | "hard"
 	isDisabled?: boolean
-	className?: string
-//	styles?: object
 }

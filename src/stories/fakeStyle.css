@@ -9,21 +9,24 @@
   }
   
   /* btnType */
-.button-primary {
+.bg_primary {
     background: var(--primary-color);
 }
-.button-secondary {
+.bg_secondary {
     background: var(--secundary-color);
 }
-.button-CTA{
+.bg_CTA{
     text-transform: uppercase;
     background: var(--call-to-action);
-  }
+}
 
+.txt_primary {
+  color: var(--primary-color);
+}
+.txt_secondary {
+  color: var(--secundary-color);
+}
 
-  .text_primary {
-    color: var(--primary-color);
-  }
-  .text_secondary {
-    color: var(--secundary-color);
-  }
+.clasedeprueba{
+  font-size: 5rem;
+}

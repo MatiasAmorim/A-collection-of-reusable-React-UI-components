@@ -1,10 +1,11 @@
 import { MouseEventHandler } from "react"
 
 export type IconType = {
-	size: "lg" | "md" | "sm"
 	name: string
-	color: string 
-	onClick?: MouseEventHandler
-	otherClass?: string //Alow to set personalized classes
+	color: string
+	size?: "lg" | "md" | "sm"
 	bgColor?: string //set backgound to the icon and color
+	shape?: "circle" | "square" 
+	onClick?: MouseEventHandler
+	classes?: string //Alow to set personalized classes
 } 
