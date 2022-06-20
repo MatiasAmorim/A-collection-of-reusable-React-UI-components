@@ -9,12 +9,12 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: `**Este componente tiene 2 argumentos obligatorios _label_ y _bnType_.**\
+        component: `**Este componente tiene 2 argumentos obligatorios _label_ y _btnType_.**\
         
         Descripcion de argumentos: (Ver introducción para conocer las clases que usted debe agregar a su proyecto)\
         
         **_label_**: (string) Texto descriptivo en el botón.  
-        **_bnType_**: (_primary_: Boton primario. _secondary_: Boton secundario. _CTA_: Boton Call To Action.  _link_: Boton link.) Color de fondo.   
+        **_btnType_**: (_primary_: Boton primario. _secondary_: Boton secundario. _CTA_: Boton Call To Action.  _link_: Boton link.) Color de fondo.   
         **_onClick_**: (Funcion).   
         **_size_**: (_sm_: Boton small. _md_: Valor por defecto boton mediano. _lg_: Boton grande)
         **_classes_**: (string) Clases adicionales.   
@@ -37,23 +37,23 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 export const Types = () => (
   <ThemeContext.Provider value={themeDefaultValues}>
     <Button label="Primary Button" 
-     bnType="primary"/>
+     btnType="primary"/>
     <Button label="Secondary Button" 
-     bnType="secondary"/>
+     btnType="secondary"/>
     <Button label="CTA Button" 
-     bnType="CTA"/>
+     btnType="CTA"/>
   </ThemeContext.Provider>
 );
 
 export const Size = () => (
   <ThemeContext.Provider value={themeDefaultValues}>
     <Button label="Small Size Button" 
-     bnType="CTA" 
+     btnType="CTA" 
      size="sm"/>
      <Button label="Default Size Button" 
-     bnType="CTA"/>
+     btnType="CTA"/>
      <Button label="Large Size Button" 
-     bnType="CTA" 
+     btnType="CTA" 
      size="lg"/>
   </ThemeContext.Provider>
 );
@@ -62,13 +62,13 @@ export const Size = () => (
 export const Border = () => (
   <ThemeContext.Provider value={themeDefaultValues}>
     <Button label="Default Border Button" 
-      bnType="primary" 
+      btnType="primary" 
       rounded="hard"/>
      <Button label="Soft Size Button" 
-      bnType="primary"
+      btnType="primary"
       rounded="soft"/>
      <Button label="None Size Button" 
-      bnType="primary" 
+      btnType="primary" 
       rounded="none"/>
   </ThemeContext.Provider>
 );

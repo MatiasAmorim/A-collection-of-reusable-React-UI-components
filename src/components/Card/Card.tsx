@@ -42,16 +42,14 @@ const Card: React.FC<CardType> = (props) => {
               <span
                 className={iconName}
                 style={{
-                  background: iconColor==null? themeC.primaryColor : iconColor,
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
+                  color: iconColor==null? themeC.primaryColor : iconColor
                 }}
               ></span>
             </div>
             <p className="description">{description}</p>
             <Button
               size="md"
-              bnType="primary"
+              btnType="primary"
               label={txtBtn}
               onClick={onClick}
             />
