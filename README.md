@@ -4,7 +4,7 @@ A collection of reusable React UI components.
 
 ## Usage
 
-Run `npm i --save complib-vane-test` in your project root (that contains the `package.json` file) to get started.
+Run `npm i --save webpack_uilb_test` in your project root (that contains the `package.json` file) to get started.
 
 ## Theming
 
@@ -17,7 +17,7 @@ You need to insert the values for the _ThemeContext.Provider_. For now there is 
 ## Context Theme
 
 ```javascript
-import { ThemeContext } from 'complib-vane-test'
+import { ThemeContext } from 'webpack_uilb_test'
 ...
 // Set or import theming values
 const NewValues = {
@@ -44,7 +44,7 @@ export default App;
 ## ExampleComponent
 
 ```javascript
-import { Button } from 'complib-vane-test'
+import { Button } from 'webpack_uilb_test'
 ...
 // A simple button with just mandatory lable
 // all other props take default values
