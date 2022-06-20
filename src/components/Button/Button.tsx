@@ -4,7 +4,7 @@ import "./Button.css"
 
 import {ThemeContext} from "../Theme/ThemeContext";
 
-const Button = ({label, size="md", bnType, onClick, classes="", rounded="hard", isDisabled}:ButtonType) => {
+const Button = ({label, size="md", btnType, onClick, classes="", rounded="hard", isDisabled}:ButtonType) => {
 	const themeC = useContext(ThemeContext);
 
 	return (
@@ -12,8 +12,8 @@ const Button = ({label, size="md", bnType, onClick, classes="", rounded="hard", 
 			className={`button ${classes} ${`button_${size}`} ${`button_${rounded}`} ${isDisabled?"disabled": ""}`}
 			onClick={onClick}
 			disabled={isDisabled ?? false}
-			style={{background: (bnType== "primary") ? themeC.primaryColor 
-			: (bnType== "secondary") ? themeC.secundaryColor : themeC.CTAColor }}>
+			style={{background: (btnType== "primary") ? themeC.primaryColor 
+			: (btnType== "secondary") ? themeC.secundaryColor : themeC.CTAColor }}>
 			{label}
 		</button>
 	)
