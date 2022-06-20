@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import "../../stories/fakeStyle.css";
 import { CardList } from "../index";
+import {ThemeContext} from "../../index";
 
 export default {
   title: "Componentes/CardList",
@@ -29,11 +29,17 @@ export default {
 const Template: ComponentStory<typeof CardList> = (args) => <CardList {...args} />;
 
 const handleClick= ()=>alert('hola')
+const themeDefaultValues = {
+  primaryColor: "blue",
+  secundaryColor: "#8b96ad",
+  CTAColor: "linear-gradient(-147deg,rgba(244, 132, 39, 1) 2%,rgba(238, 62, 150, 1) 86%)",
+  lightBg: "#e8f1ff"
+}
 
-export const Card = Template.bind({});
-Card.args = {
-    CLlabel: "Reporteria de puntos de venta",
-    onClick: handleClick,
-    CLbgColor:"#e8f1ff",
-    CLcolor: "#0e1d3a"
-};
+export const Card = () => (
+  <ThemeContext.Provider value={themeDefaultValues}>
+    <CardList CLlabel="Reporteria de puntos de venta"
+    onClick={handleClick}
+    CLcolor="#0e1d3a"/>
+  </ThemeContext.Provider>
+);

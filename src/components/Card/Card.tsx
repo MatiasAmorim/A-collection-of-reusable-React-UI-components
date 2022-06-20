@@ -1,32 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { CardType } from "./Card.types";
 import { default as Button } from "../Button/index";
 import "../style.css";
 import "./Card.css";
+import {ThemeContext} from "../Theme/ThemeContext";
+
 
 const Card: React.FC<CardType> = (props) => {
   const {
     description,
     txtBtn,
     iconName,
-    bg,
     hasShadow,
-    type,
+    cardType,
     iconColor,
     infoIcon,
     infoText,
+    onClick
   } = props;
 
   const [showInfo, setShowInfo] = useState(false);
   const showInfoCard = () => setShowInfo(!showInfo);
+	const themeC = useContext(ThemeContext);
+
   return (
     <>
       <div
         className={`card_lb ${hasShadow ? "shadow" : ""} ${
-          type == "app" ? "apps" : "module"
+          cardType == "app" ? "apps" : "module"
         }`}
         style={{
-          background: bg,
+          background: cardType=="mod"? "#fff": themeC.lightBg,
         }}
       >
         <div className="iconInfo-container">
@@ -38,7 +42,7 @@ const Card: React.FC<CardType> = (props) => {
               <span
                 className={iconName}
                 style={{
-                  background: iconColor,
+                  background: iconColor==null? themeC.primaryColor : iconColor,
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                 }}
@@ -47,9 +51,9 @@ const Card: React.FC<CardType> = (props) => {
             <p className="description">{description}</p>
             <Button
               size="md"
-              bgColor="primary"
+              bnType="primary"
               label={txtBtn}
-              onClick={() => {}}
+              onClick={onClick}
             />
           </>
         ) : (

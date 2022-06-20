@@ -3,6 +3,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import "../../stories/fakeStyle.css";
 import { Icon } from "../index";
 
+
 export default {
   title: "Componentes/Icon",
   component: Icon,
@@ -37,38 +38,15 @@ const Template: ComponentStory<typeof Icon> = (args) => <Icon {...args} />;
 
 const showAlert=()=> alert("click icon")
 
-export const Default = Template.bind({});
-Default.args = {
-  Icolor:"rgba(0, 0, 255, 1)", 
-  Iname: "icon-home", 
-  onClick: showAlert
-};
 
-export const Small = Template.bind({});
-Small.args = {
-  Icolor:"rgba(0, 0, 255, 1)", 
-  Iname: "icon-home", 
-  Isize: "sm"
-};
+export const Sizes = () => (<>
+    <Icon Icolor="rgba(0, 0, 255, 1)" Iname="icon-home" Isize="sm" onClick={showAlert}/>
+    <Icon Icolor="rgba(0, 0, 255, 1)" Iname="icon-home" Isize="md" onClick={showAlert}/>
+    <Icon Icolor="rgba(0, 0, 255, 1)" Iname="icon-home" Isize="lg" onClick={showAlert}/>
+</>);
 
-export const Large = Template.bind({});
-Large.args = {
-  Icolor:"rgba(0, 0, 255, 1)", 
-  Iname: "icon-home", 
-  Isize: "lg"
-};
-
-export const CircleBackgroundDefault = Template.bind({});
-CircleBackgroundDefault.args = {
-  Icolor:"white", 
-  Iname: "icon-home", 
-  IbgColor: "rgba(0, 0, 255, 1)"
-};
-
-export const SqureBackground = Template.bind({});
-SqureBackground.args = {
-  Icolor:"white", 
-  Iname: "icon-home", 
-  Ishape: "square",
-  IbgColor: "tomato"
-};
+export const WithBackground = () => (<>
+  <Icon Icolor="#FFF" Iname="icon-home"  IbgColor="tomato"/>
+  <br/>
+  <Icon Icolor="#FFF" Iname="icon-home"  IbgColor="tomato" Ishape="square"/>
+</>);

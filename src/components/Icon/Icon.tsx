@@ -1,10 +1,11 @@
 import React from "react"
 import { IconType } from "./Icon.types"
-import "./Icon.css"
+import "./Icon.css";
+
 
 const Button= ({ Icolor, Iname, Isize="md", onClick, Iclasses, IbgColor, Ishape="circle"} : IconType) => {
 	return (
-		<div className={`icon_container ${Ishape}`} style={{
+		<span className={`icon_container ${Ishape}`} style={{
 			background: IbgColor
 		}}>
 			<span 
@@ -14,7 +15,7 @@ const Button= ({ Icolor, Iname, Isize="md", onClick, Iclasses, IbgColor, Ishape=
 					color: Icolor,
 				}}
 			></span>
-		</div>
+		</span>
 		
 	)
 }

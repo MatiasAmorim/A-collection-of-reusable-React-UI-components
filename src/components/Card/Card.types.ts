@@ -1,15 +1,14 @@
 
+import { ButtonType } from "../Button/Button.types";
 
-
-export type CardType = {
+export interface CardType extends Pick<ButtonType, "onClick" > {
 	description: string
-	type: "mod" | "app"
+	cardType: "mod" | "app"
 	txtBtn: string //Text label for the button
 	iconName: string //Personalized principal icon
 	iconColor?: string //Change icon color
 	infoIcon: string
   className?: string
-	bg?: string //optional gackground color
 	hasShadow?: boolean //Optional shadow for cards
 	infoText: string //Text about the infomation of the card
 	

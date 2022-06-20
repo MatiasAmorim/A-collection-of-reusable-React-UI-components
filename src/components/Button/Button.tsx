@@ -1,23 +1,19 @@
-import React from "react"
+import React, { useContext, useEffect, useState } from "react"
 import { ButtonType } from "./Button.types"
 import "./Button.css"
 
-import useTheme from "../Theme/Theme";
+import {ThemeContext} from "../Theme/ThemeContext";
 
-const Button = ({label, size="md", bgColor, onClick, classes="", rounded="hard", isDisabled}:ButtonType) => {
-const { themeC }= useTheme();
+const Button = ({label, size="md", bnType, onClick, classes="", rounded="hard", isDisabled}:ButtonType) => {
+	const themeC = useContext(ThemeContext);
+
 	return (
 		<button
-			className={`button
-						${classes}
-						${`button_${size}`}
-						${`button_${rounded}`}
-						${isDisabled?"disabled": ""}
-						${bgColor=="link"? "txt_primary": ""}
-					`}
+			className={`button ${classes} ${`button_${size}`} ${`button_${rounded}`} ${isDisabled?"disabled": ""}`}
 			onClick={onClick}
 			disabled={isDisabled ?? false}
-			style={{background: themeC.primaryColor}}>
+			style={{background: (bnType== "primary") ? themeC.primaryColor 
+			: (bnType== "secondary") ? themeC.secundaryColor : themeC.CTAColor }}>
 			{label}
 		</button>
 	)

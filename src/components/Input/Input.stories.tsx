@@ -2,6 +2,7 @@ import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import "../../stories/fakeStyle.css";
 import { Input } from "../index";
+import {ThemeContext} from "../../index";
 
 export default {
   title: "Componentes/Input",
@@ -26,11 +27,19 @@ export default {
 
 const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;
 
+const themeDefaultValues = {
+  primaryColor: "red",
+  secundaryColor: "#8b96ad",
+  CTAColor: "linear-gradient(-147deg,rgba(244, 132, 39, 1) 2%,rgba(238, 62, 150, 1) 86%)",
+}
 
-export const InputExample = Template.bind({});
-InputExample.args = {
-   text:"correo",
-};
+export const InputElement = () => (
+  <ThemeContext.Provider value={themeDefaultValues}>
+    <Input text="Correo" requiredMsg="Por favor colocar el correo" errorMgs="Debe ingresar un correo valido"/>
+  </ThemeContext.Provider>
+);
+
+
 
 
 export const InputEmpty = Template.bind({});

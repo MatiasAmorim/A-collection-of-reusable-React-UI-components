@@ -5,6 +5,7 @@ export { default as Icon } from "./Icon"
 export { default as CardList } from "./CardList"
 export { default as Dropdown } from "./Dropdown"
 export { default as Checkbox } from "./Checkbox"
+export { ThemeContext } from "./Theme/ThemeContext"
 
 
 

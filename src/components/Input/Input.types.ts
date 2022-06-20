@@ -5,5 +5,5 @@ export type InputType = {
 	hasError?: boolean
 	isEmpty?: boolean
 	type?: string
-	
+	hasIcon?:boolean	
 }
