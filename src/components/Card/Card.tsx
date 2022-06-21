@@ -4,6 +4,7 @@ import { default as Button } from "../Button/index";
 import "../style.css";
 import "./Card.css";
 import {ThemeContext} from "../Theme/ThemeContext";
+import styled from 'styled-components';
 
 
 const Card: React.FC<CardType> = (props) => {
@@ -23,28 +24,28 @@ const Card: React.FC<CardType> = (props) => {
   const showInfoCard = () => setShowInfo(!showInfo);
 	const themeC = useContext(ThemeContext);
 
+  const Div = styled.div`
+  background: ${cardType=="mod"? "#fff": themeC.lightBg}
+  `;
+
+  const Span = styled.span`
+  color: ${iconColor==null? themeC.primaryColor : iconColor}
+  `;
   return (
     <>
-      <div
+      <Div
         className={`card_lb ${hasShadow ? "shadow" : ""} ${
           cardType == "app" ? "apps" : "module"
-        }`}
-        style={{
-          background: cardType=="mod"? "#fff": themeC.lightBg,
-        }}
-      >
+        }`}>
         <div className="iconInfo-container">
-          <span className={infoIcon} onClick={showInfoCard}></span>
+          <span className={`info__icon-btn ${infoIcon}`} onClick={showInfoCard}></span>
         </div>
         {!showInfo ? (
           <>
             <div className="iconPrimary-container">
-              <span
+              <Span
                 className={iconName}
-                style={{
-                  color: iconColor==null? themeC.primaryColor : iconColor
-                }}
-              ></span>
+              ></Span>
             </div>
             <p className="description">{description}</p>
             <Button
@@ -59,7 +60,7 @@ const Card: React.FC<CardType> = (props) => {
             <p className="infoText">{infoText}</p>
           </div>
         )}
-      </div>
+      </Div>
     </>
   );
 };

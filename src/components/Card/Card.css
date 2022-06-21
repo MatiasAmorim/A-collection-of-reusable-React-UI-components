@@ -17,6 +17,9 @@
 .card_lb.apps {
   height: 170px;
 }
+.info__icon-btn{
+  z-index: 2;
+}
 
 /* Info Icon*/
 .iconInfo-container {
@@ -58,11 +61,13 @@
 }
 
 /*INfo text*/
-
 .infoText {
+  position: absolute;
+  top: 1.5rem;
+  margin: 1rem 0;
+  bottom: 0px;
+  right: -15px;
+  overflow: auto;
+  padding: 5px;
 }
 
-.card_lb .back {
-  position: absolute;
-  overflow-y: scroll;
-}

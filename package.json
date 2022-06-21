@@ -1,6 +1,6 @@
 {
   "name": "webpack_uilb_test",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -22,6 +22,7 @@
     "@storybook/testing-library": "^0.0.13",
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
+    "@types/styled-components": "^5.1.25",
     "babel-loader": "^8.2.5",
     "ts-loader": "^9.3.0",
     "typescript": "^4.7.4",
@@ -32,8 +33,10 @@
     "react": ">=16.12.0",
     "react-dom": ">=16.12.0"
   },
-  "dependencies": {},
-  "file":[
+  "dependencies": {
+    "styled-components": "^5.3.5"
+  },
+  "file": [
     "dist/"
   ]
 }
