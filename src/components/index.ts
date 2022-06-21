@@ -6,6 +6,7 @@ export { default as CardList } from "./CardList"
 export { default as Dropdown } from "./Dropdown"
 export { default as Checkbox } from "./Checkbox"
 export { default as ToogleButton } from "./ToogleButton"
+export { default as DatePicker } from "./DatePicker"
 export { ThemeContext } from "./Theme/ThemeContext"
 
 
